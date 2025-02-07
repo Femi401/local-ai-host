@@ -71,7 +71,7 @@ const loginPageStyles = css`
   height: 100%;
 `;
 
-const Login = () => {
+const Signup = () => {
   const navigate = useNavigate();
   const handleGuestClick = () => {
     navigate("/chatbot");
@@ -80,37 +80,37 @@ const Login = () => {
   return (
     <div css={loginPageStyles}>
       <div css={modalStyles}>
-        <h2>Log In</h2>
-        <p>Log in through:</p>
+        <h2>Sign up</h2>
+        <p>Sign up through:</p>
         <button css={buttonStyles}>
           <img src={googleLogo} alt="Google" />
-          Log in with Google
+          Sign up with Google
         </button>
         <button css={buttonStyles}>
           <img src={appleLogo} alt="Apple" />
-          Log in with Apple
+          Sign up with Apple
         </button>
         <button css={buttonStyles}>
           <img src={githubLogo} alt="GitHub" />
-          Log in with GitHub
+          Sign up with GitHub
         </button>
         <button css={buttonStyles}>
           <img src={microsoftLogo} alt="Microsoft" />
-          Log in with Microsoft
+          Sign up with Microsoft
         </button>
         <button css={buttonStyles}>
           <img src={emailLogo} alt="Email" />
-          Log in with Email
+          Sign up with Email
         </button>
       </div>
       <button css={guestButtonStyles} onClick={handleGuestClick}>
         Continue as Guest
       </button>
       <p>
-        Don't have an account? <Link to="/signup">Sign up here</Link>
+        Already have an account? <Link to="/">Log in here</Link>
       </p>
     </div>
   );
 };
 
-export default Login;
+export default Signup;
